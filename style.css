@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+.generate-pw-container {
+    max-width: 600px;
+    margin:0 auto;
+    padding:1em;
+    height:100vh;
+  
+}
+ 
+ .display-passwords-container {
+     border-top: 1px solid #D5D4D8;
+ } 
+   
+.title {
+font-family: Inter;
+font-size: 40px;
+font-style: normal;
+font-weight: 800;
+line-height: 40px;
+letter-spacing: -0.05em;
+text-align: left;
+margin-bottom:0;
+}
+
+.title .accent-txt {
+    color:#55F991;
+    display:block;
+}
+
+.subtitle {
+font-family: 'Inter';
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+color: #6B7280;
+margin-top:0;
+}
+
+
+.generate-passwords-btn,
+.change-password-length {
+ font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+background: #10B981;
+color:#fff;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 17px 9px 15px;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+border-radius: 6px;
+
+}
+.generate-passwords-btn img {
+height: 18px;
+width: 14px;
+margin-right:0.2em;
+}
+.actions {
+   display:flex;
+   justify-content: space-between; 
+}
+
+
+.display-passwords-container {
+  display:flex;
+  flex-wrap: wrap;
+ max-width:600px;
+align-items: center;
+justify-content: center;
+  margin: 4em auto;
+  padding:1.5em;
+ 
+}
+
+.pw-display{
+    display:flex;
+    justify-content:center; 
+    align-items:center; 
+    background:#273549;
+    height:2.5em;
+    width: 10em;
+    color:#5DEF92;
+    margin:0.5em;
+    padding:0.4em 0.8em;
+    border-radius: 6px;
+}
+
+.two, .four {
+    grid-column-start:3; 
+ }
+
+.row{
+    grid-row:2;
+}
+@media (max-width:450px){
+.display-passwords-container {
+    margin-top:1em;
+    display:flex;
+    flex-direction:column; 
+}
+.actions{
+    display:flex;
+    flex-direction: column;
+    margin: 1em;
+}
+.actions > button {
+    margin:0.5em;
+    padding:0.4em 0.8em;
+}
+}
