@@ -12,7 +12,7 @@ function getRandomPassword() {
         pLengthErrorEl.textContent = "Requirement: Password must have at least 6 characters"
     } else {
         pLengthErrorEl.textContent = ""
-        passwordLength = parseInt(passwordLengthEl.value)
+        passwordLength = passwordLengthEl.value
         for (let i = 0; i < passwordLength; i++) {
             randomIndex = Math.floor(Math.random() * characters.length)
             password += characters[randomIndex]
