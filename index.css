@@ -1,0 +1,112 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #333;
+    margin: 0;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #1F2937;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+    font-family: 'Karla';
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    color: #FFFFFF;
+    margin-left: 52px;
+    margin-top: 115px;
+}
+
+#title-styled-part {
+    color: #4ADF86;
+}
+
+#catch-sentence {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #D5D4D8;
+    margin-left: 52px;
+}
+
+#password-btn {
+    cursor: pointer;
+}
+
+#password-btn, #password-length-input {
+    background: #10B981;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: none;
+    padding: 9px 17px 9px 17px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#pLength-error {
+    font-size: 10px;
+    line-height: 20px;
+    color: #F43F5E;
+    margin-left: 325px
+}
+
+
+#password-line {
+    border: 1px solid #2F3E53;
+    width: 450px;
+    margin-top: 35px;
+}
+
+.passwords {
+    border: 1px solid black;
+    width: 211px;
+    height: 39px;
+    margin-top: 35px;
+    margin-bottom: 115px;
+    background: #273549;
+    border-radius: 6px;
+    border: none;
+}
+
+#passwords-1 {
+    margin-right: 10px;
+    margin-left: 52px;
+    text-align: center;
+}
+
+
+#passwords-2 {
+    margin-right: 52px;
+    margin-left: 12px;
+}
+
+#password-1, #password-2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 200%;
+    text-align: center;
+    color: #55F991;
+    padding: 4px 16px;
+    margin: 0px;
+}
+
+.passwords-container {
+    display: flex;
+    justify-content: center;
+}
