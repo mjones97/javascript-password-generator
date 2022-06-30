@@ -1,34 +1,29 @@
-const generatePasswordBtn = document.querySelector('.generate-passwords-btn')
-const displayPasswords = document.querySelector('.display-passwords-container')
-const displayPassword =document.querySelectorAll('.pw-display')
-const changePasswordLength = document.querySelector('.change-password-length')
+const password1 = document.querySelector("#password-1")
+const password2 = document.querySelector("#password-2")
+const passwordLengthEl = document.querySelector("#password-length-input")
+const pLengthErrorEl = document.querySelector("#pLength-error")
 
-const characters =['A','B','C','D','E','F','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','n','o','p','q','r','s','t','u','v','w','x','y','z','*','&','$','#','!','?','<','>','+']
-    
-function generatePassword(num=8){
-  const pwArr =[]
-  for(let j=1; j <=4; j++){
-      let resultStr=""
-      for(let i=1; i <= num; i++){
-          let randomIndex = Math.floor(Math.random() * characters.length) 
-          resultStr += characters[randomIndex]
+const characters =['A','B','C','D','E','F','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','n','o','p','q','r','s','t','u','v','w','x','y','z','*','&','$','#','!','?','<','>','+'] 
+
+function getRandomPassword() {
+    let password = ""
+    let passwordLength = 0
+    if (passwordLengthEl.value < 6) {
+        pLengthErrorEl.textContent = "Requirement: Password must have at least 6 characters"
+    } else {
+        pLengthErrorEl.textContent = ""
+        passwordLength = parseInt(passwordLengthEl.value)
+        for (let i = 0; i < passwordLength; i++) {
+            randomIndex = Math.floor(Math.random() * characters.length)
+            password += characters[randomIndex]
         }
-   pwArr.push(resultStr)
-    }
-    return pwArr
-}
-
-let num = changePasswordLength.min 
-changePasswordLength.value = num
-changePasswordLength.addEventListener('input' , () =>  num = changePasswordLength.value)
-   
-function renderPassword(){
-    let passwords =  generatePassword(num)
-    //console.log(passwords)
-    //console.log(displayPassword)
-    for(let i=0; i < displayPassword.length; i++){
-        displayPassword[i].textContent = passwords[i]
+        return password
     }
 }
 
-generatePasswordBtn.addEventListener('click' , renderPassword)  
+function getPasswords() {
+    let firstPassword = getRandomPassword()
+    let secondPassword = getRandomPassword()
+    password1.textContent = firstPassword
+    password2.textContent = secondPassword
+}
